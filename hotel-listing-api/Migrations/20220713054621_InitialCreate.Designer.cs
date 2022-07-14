@@ -11,8 +11,8 @@ using hotel_listing_api.Data;
 namespace hotel_listing_api.Migrations
 {
     [DbContext(typeof(HotelListingDbContext))]
-    [Migration("20220711063402_SeededCountriesAndHotels")]
-    partial class SeededCountriesAndHotels
+    [Migration("20220713054621_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
