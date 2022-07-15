@@ -19,10 +19,10 @@ namespace hotel_listing_api.Controllers
         private readonly IMapper _mapper;
         private readonly ICountriesRepository _countriesRepository;
 
-        public CountriesController(IMapper mapper, ICountriesRepository countriesRepository)
+        public CountriesController(ICountriesRepository countriesRepository, IMapper mapper)
         {
-            _mapper = mapper;
             _countriesRepository = countriesRepository;
+            _mapper = mapper;
         }
 
         // GET: api/Countries
