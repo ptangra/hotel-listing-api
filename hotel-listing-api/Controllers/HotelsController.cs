@@ -12,6 +12,9 @@ using hotel_listing_api.Models.Hotels;
 
 namespace hotel_listing_api.Controllers
 {
+
+    // Implement authorization 
+
     [Route("api/[controller]")]
     [ApiController]
     public class HotelsController : ControllerBase

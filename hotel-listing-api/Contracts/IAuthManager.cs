@@ -7,5 +7,7 @@ namespace hotel_listing_api.Contracts
     {
         Task<IEnumerable<IdentityError>> Register(UserDTO userDto);
         Task<AuthResponseDTO> Login(LoginDTO loginDto);
+        Task<string> CreateRefreshToken();
+        Task<AuthResponseDTO> VerifyRefreshToken(AuthResponseDTO request);
     }
 }
