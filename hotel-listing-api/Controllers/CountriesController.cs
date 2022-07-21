@@ -18,12 +18,14 @@ namespace hotel_listing_api.Controllers
     public class CountriesController : ControllerBase
     {
         private readonly IMapper _mapper;
+        private readonly ILogger<CountriesController> _logger;
         private readonly ICountriesRepository _countriesRepository;
 
-        public CountriesController(ICountriesRepository countriesRepository, IMapper mapper)
+        public CountriesController(ICountriesRepository countriesRepository, IMapper mapper, ILogger<CountriesController> logger)
         {
             _countriesRepository = countriesRepository;
             _mapper = mapper;
+            _logger = logger;
         }
 
         // GET: api/Countries
@@ -43,6 +45,7 @@ namespace hotel_listing_api.Controllers
 
             if (country == null)
             {
+                _logger.LogWarning($"No Record found in {nameof(GetCountry)} with Id: {id}. ");
                 return NotFound();
             }
 
